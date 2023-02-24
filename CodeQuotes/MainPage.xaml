@@ -8,6 +8,7 @@
             <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
                 <GradientStopCollection>
                     <GradientStop Offset="0" Color="DarkBlue"/>
+                    <GradientStop Offset=".5" Color="HotPink"/>
                     <GradientStop Offset="1" Color="LightBlue"/>
                 </GradientStopCollection>
             </LinearGradientBrush>
