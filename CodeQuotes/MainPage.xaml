@@ -3,32 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CodeQuotes.MainPage">
 
-    <Grid BackgroundColor="Navy">
+    <Grid x:Name="background">
         <Grid.Background>
-            <RadialGradientBrush Center="0.5,0.5">
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                 <GradientStopCollection>
-                    <GradientStop Offset="0" Color="DarkBlue"/>
-                    <GradientStop Offset=".5" Color="HotPink"/>
-                    <GradientStop Offset="1" Color="LightBlue"/>
+                    <GradientStop Offset="0" Color="#051937"/>
+                    <GradientStop Offset=".25" Color="#004d7a"/>
+                    <GradientStop Offset=".50" Color="#008793"/>
+                    <GradientStop Offset=".75" Color="#00bf72"/>
+                    <GradientStop Offset="1" Color="#a8eb12"/>
                 </GradientStopCollection>
-            </RadialGradientBrush>
+            </LinearGradientBrush>
         </Grid.Background>
-        
+
         <Grid Margin="25" RowDefinitions=".8*,.2*">
             <Label
+                x:Name="quote"
+                FontFamily="Bison"
                 Grid.Row="0"
                 FontSize="50"
-                FontFamily="Bison"
                 HorizontalTextAlignment="Center"
                 Text="The Beginnings of all things are small."
                 TextColor="White"
-            VerticalOptions="Center"/>
+                VerticalOptions="Center"/>
             <Button
+                x:Name="btnGenerateQuote"
+                FontSize="Large"
                 Grid.Row="1"
                 BackgroundColor="Black"
-                Opacity=".4"
+                Clicked="btnGenerateQuote_Clicked"
+                Opacity=".7"
                 Text="Get New Quote"/>
         </Grid>
     </Grid>
-    
+
 </ContentPage>
